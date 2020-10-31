@@ -6,6 +6,9 @@
 \usepackage{booktabs} %schöne Tabellen
 \usepackage{graphicx} %Bilder
 \usepackage{microtype} % Mikrotypografie, mit optischem Randausgleich
+\usepackage{blindtext}
+\usepackage{subcaption}
+\usepackage{lmodern}
 
 
 \author{Ann-Christin Falkenreck}
@@ -37,11 +40,31 @@
 	
 \chapter{title}
 \section{title}
+
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.75\textwidth]{Bilder/Herbst}
 		\caption{Herbst}\label{fig:Herbst}
 	\end{figure}
+
+\blindtext[10]
+
+\begin{figure}
+	\centering
+	\subcaptionbox{Herbst\label{fig:herbst}}
+	{\includegraphics[width=0.49\textwidth]{Bilder/Herbst}}
+	\subcaptionbox{Sonnenaufgang \label{fig:Sonnenaufgang}}
+	{\includegraphics[width=0.49\textwidth]{Bilder/Sonnenaufgang}}
+	\caption{Zwei Bilder}\label{fig:Natur}
+\end{figure}
+
+Abbildung \ref{fig:Herbst} auf Seite \pageref{fig:Herbst}
+
+Abbildung \ref{fig:Sonnenaufgang} auf Seite \pageref{fig:Sonnenaufgang}
+
+Abbildung \ref{fig:Natur} auf Seite \pageref{fig:Natur}
+
+\blindtext[2]
 
 	
 	
